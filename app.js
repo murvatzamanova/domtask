@@ -38,30 +38,24 @@
 
 
 
-// let span = document.getElementById("span");
-// let paragraph = document.getElementById("btn").addEventListener("click", () => {
+    let count = 1;
+    let artma = true;
 
-//   for (let a = 1; a <= 10 ; a++){
-// console.log(`Click me ${a}`)
-//   }
-
-//   for (let a = 10; a >= 1 ; a--){
-//     console.log(`Click me ${a}`)
-//       }
-    
-// });
-
-
-let span = document.getElementById("span");
-let paragraph = document.getElementById("btn").addEventListener("click", () => {
-
-  for (let a = 1; a <= 10 ; a++){
-    btn.textContent = (`Click me ${a}`)
-  }
-
-  for (let a = 10; a >= 1 ; a--){
-    btn.textContent = (`Click me ${a}`)
-      }
-    
-});
+    document.getElementById("btn").addEventListener("click", function() {
+        if (artma) {
+            
+            document.getElementById("counter").textContent = count;
+            if (count == 0) {
+                artma = false;
+                count++;
+            }
+        } else {
+            
+            document.getElementById("counter").textContent = count;
+            if (count == 10) {
+                artma = true;
+                count--;
+            }
+        }
+    });
 
