@@ -42,16 +42,16 @@
     let artma = true;
 
     document.getElementById("btn").addEventListener("click", function() {
-        if (artma) {
+                   document.getElementById("counter").textContent = count;
+
+      if (artma) {
             
-            document.getElementById("counter").textContent = count;
             if (count == 0) {
                 artma = false;
                 count++;
             }
         } else {
             
-            document.getElementById("counter").textContent = count;
             if (count == 10) {
                 artma = true;
                 count--;
